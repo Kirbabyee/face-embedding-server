@@ -6,3 +6,4 @@ deepface
 tf-keras
 opencv-python
 numpy
+supabase
