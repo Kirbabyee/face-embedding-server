@@ -11,8 +11,13 @@ from fastapi import FastAPI
 app = FastAPI()
 
 @app.get("/")
-def health():
-    return {"status": "ok"}
+def root():
+    return {"ok": True, "service": "face-embedding-server"}
+
+@app.get("/verify")
+def verify_get():
+    return {"ok": True, "hint": "Use POST /verify with form-data: user_id + image"}
+
 
 SUPABASE_URL = "https://ucfundmbawljngzowzgd.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVjZnVuZG1iYXdsam5nem93emdkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NzU5Njk0NCwiZXhwIjoyMDgzMTcyOTQ0fQ.Skc7bnElRtJagyaL8JCieLR_5lFsTwOHteF9RE7pFmU"
