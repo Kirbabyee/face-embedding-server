@@ -1,9 +1,8 @@
 fastapi
-uvicorn
+uvicorn[standard]
 gunicorn
 deepface
-tensorflow-cpu
-numpy
 opencv-python-headless
+numpy
 python-multipart
 supabase
